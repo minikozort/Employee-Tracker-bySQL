@@ -17,7 +17,7 @@ How to Run:
 10 - In the same terminal, please type in either "npm start" or "node server.js" and press enter to start the application.
 11 - Please select from the various prompts to view all departments, view all roles, view all employees, add a department, add a role, add an employee, and update an employee role or exit. 
 
-Github Repository : https://github.com/minikozort/Employee-Tracker-bySQL
+Github Repository : https://github.com/minikozort/Employee-Tracker-bypostgreSQL
 Mock-up Video Link : https://www.loom.com/share/6d325e25891e4a0c8b4d918c51c5eaa8?sid=af1fb687-2a21-492e-82ba-9f0dd3ebd116
 
 ![alt text](./Pics/Employee-tracker-mainpage.PNG)
