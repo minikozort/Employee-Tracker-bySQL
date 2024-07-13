@@ -1,3 +1,4 @@
+// Import and require Pool (node-postgres) and inquirer
 const { Pool } = require('pg');
 const inquirer = require('inquirer');
 
@@ -18,7 +19,7 @@ function startApp() {
   console.log("*                     EMPLOYEE MANAGER                         *")
   console.log("*                                                              *")
   console.log("****************************************************************")
-
+// Using Inquirer to promp action lists
   inquirer
     .prompt({
       name: 'action',
@@ -72,7 +73,7 @@ function viewDepartments() {
     if (err) {
       console.error('Error executing query:', err);
     } else {
-      console.table(res.rows); // Assuming you want to display results in a table format
+      console.table(res.rows);
       startApp();
     }
   });
@@ -95,7 +96,6 @@ function viewRoles() {
   });
 }
 
-// Function to view all employees
 // Function to view all employees
 function viewEmployees() {
   const query = `
@@ -147,7 +147,6 @@ function addDepartment() {
 
 // Function to add a role
 function addRole() {
-  // Fetch departments to provide choices for department_id
   pool.query('SELECT id, name FROM department', (err, departmentsRes) => {
     if (err) {
       console.error('Error fetching departments:', err);
@@ -194,8 +193,6 @@ function addRole() {
 }
 
 
-
-// Function to add an employee
 // Function to add an employee
 function addEmployee() {
   // Fetch roles to provide choices for role_id
