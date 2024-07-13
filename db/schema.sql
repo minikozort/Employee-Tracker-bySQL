@@ -18,5 +18,6 @@ CREATE TABLE employee (
   first_name VARCHAR(30) NOT NULL,
   last_name VARCHAR(30) NOT NULL,
   role_id INTEGER REFERENCES role(id) ON DELETE SET NULL,
+  is_manager BOOLEAN DEFAULT FALSE,
   manager_id INTEGER REFERENCES employee(id) ON DELETE SET NULL
 );
